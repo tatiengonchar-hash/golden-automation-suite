@@ -11,6 +11,9 @@ import icon09 from "@/assets/icons/icon-09-headset.png";
 import icon10 from "@/assets/icons/icon-10-payments.png";
 import icon11 from "@/assets/icons/icon-11-warehouse.png";
 import icon12 from "@/assets/icons/icon-12-calls.png";
+import icon13 from "@/assets/icons/icon-13-ai-deals.png";
+import icon14 from "@/assets/icons/icon-14-hr.png";
+import icon15 from "@/assets/icons/icon-15-bank-ai.png";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -110,6 +113,24 @@ const projects: Project[] = [
     description:
       "Автоматическое заполнение CRM по итогам звонка в отделе продаж: транскрипция, тэги и следующие шаги без ручного ввода.",
     icon: icon12,
+  },
+  {
+    title: "ИИ-агент: сделки и логистика",
+    description:
+      "ИИ-агент, который закрывает сделки и координирует логистику: согласование условий, подготовка документов и контроль доставки без ручного участия менеджера.",
+    icon: icon13,
+  },
+  {
+    title: "Автоматизация HR-процессов",
+    description:
+      "Единый контур для HR: оценка сотрудников, онбординг новичков и обработка внутренних заявок — без таблиц и потерянных писем.",
+    icon: icon14,
+  },
+  {
+    title: "ИИ в закрытом контуре банка",
+    description:
+      "Внедрение ИИ внутри защищённого периметра банка: работа без интернета и внешних API, полный контроль данных и соответствие требованиям ИБ.",
+    icon: icon15,
   },
 ];
 
