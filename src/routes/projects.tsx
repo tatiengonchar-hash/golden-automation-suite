@@ -14,6 +14,10 @@ import icon12 from "@/assets/icons/icon-12-calls.png";
 import icon13 from "@/assets/icons/icon-13-ai-deals.png";
 import icon14 from "@/assets/icons/icon-14-hr.png";
 import icon15 from "@/assets/icons/icon-15-bank-ai.png";
+import icon16 from "@/assets/icons/icon-16-interview.png";
+import icon17 from "@/assets/icons/icon-17-experts.png";
+import icon18 from "@/assets/icons/icon-18-cases.png";
+import icon19 from "@/assets/icons/icon-19-implementation.png";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -37,7 +41,7 @@ export const Route = createFileRoute("/projects")({
 
 type Project = {
   title: string;
-  description: string;
+  description?: string;
   icon: string;
 };
 
@@ -132,6 +136,26 @@ const projects: Project[] = [
       "Внедрение ИИ внутри защищённого периметра банка: работа без интернета и внешних API, полный контроль данных и соответствие требованиям ИБ.",
     icon: icon15,
   },
+  {
+    title:
+      "Проводим технические интервью в формате живых собеседований или в системе с прокторингом",
+    icon: icon16,
+  },
+  {
+    title:
+      "Оценку кандидатов выполняют практикующие инженеры и архитекторы ИИ и смежных технологий",
+    icon: icon17,
+  },
+  {
+    title:
+      "Проверяем практические навыки через прикладные бизнес-задачи и кейсы",
+    icon: icon18,
+  },
+  {
+    title:
+      "Оцениваем способность внедрять решения в бизнес, а не только разрабатывать их",
+    icon: icon19,
+  },
 ];
 
 function ProjectsPage() {
@@ -171,9 +195,11 @@ function ProjectsPage() {
                 <h3 className="text-lg font-bold leading-snug text-[#22293B]">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#22293B]/75">
-                  {p.description}
-                </p>
+                {p.description && (
+                  <p className="mt-2 text-sm leading-relaxed text-[#22293B]/75">
+                    {p.description}
+                  </p>
+                )}
               </div>
             </article>
           ))}
